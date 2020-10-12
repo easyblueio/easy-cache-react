@@ -1,0 +1,87 @@
+{
+    "version": "1.0.0",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "engines": {
+        "node": ">=14"
+    },
+    "scripts": {
+        "start": "tsdx watch",
+        "build": "tsdx build",
+        "test": "tsdx test --passWithNoTests",
+        "test:watch": "tsdx test --watch",
+        "test:coverage": "tsdx test --coverage",
+        "make-badges": "node_modules/.bin/istanbul-badges-readme",
+        "lint": "tsdx lint",
+        "prepare": "tsdx build",
+        "size": "size-limit",
+        "analyze": "size-limit --why"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/easyblue/easy-cache-react"
+    },
+    "peerDependencies": {
+        "react": ">=16"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "tsdx lint && yarn test:coverage && yarn make-badges && git add README.md"
+        }
+    },
+    "prettier": {
+        "printWidth": 80,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5"
+    },
+    "name": "easy-cache-react",
+    "keywords": [
+        "cache",
+        "react",
+        "reactjs",
+        "easyblue",
+        "easy",
+        "hooks"
+    ],
+    "author": {
+        "name": "Easyblue",
+        "email": "dev@easyblue.io",
+        "url": "https://easyblue.io"
+    },
+    "bugs": {
+        "url": "https://github.com/easyblueio/easy-cache-react/issues"
+    },
+    "homepage": "https://github.com/easyblueio/easy-cache-react#readme",
+    "module": "dist/easycache.esm.js",
+    "size-limit": [
+        {
+            "path": "dist/easycache.cjs.production.min.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/easycache.esm.js",
+            "limit": "10 KB"
+        }
+    ],
+    "devDependencies": {
+        "@size-limit/preset-small-lib": "^4.6.0",
+        "@testing-library/react-hooks": "^3.4.2",
+        "@types/react": "^16.9.51",
+        "@types/react-dom": "^16.9.8",
+        "husky": "^4.3.0",
+        "istanbul-badges-readme": "^1.0.5",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-test-renderer": "^16.13.1",
+        "size-limit": "^4.6.0",
+        "tsdx": "^0.14.0",
+        "tslib": "^2.0.2",
+        "typescript": "^4.0.3"
+    }
+}
