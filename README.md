@@ -9,17 +9,17 @@
 
 ## easy-cache-react
 
-Modern, tested and fully written in typescript.
+`easy-cache-react` provide an easy way to ensure that clients are always on the latest version of your app. Modern, tested and fully written in typescript.
 
 Written here at [easyblue.io](https://www.easyblue.io/), a french insurtech company. Check out our website to see how we're using this package in production.
 
- ## Installation
+## Installation
  
  `yarn add easy-cache-react` or `npm install easy-cache-react`
 
 ## Basic Usage
 
-## useEasyCache hook
+### useEasyCache hook
 
 ```typescript jsx
 import * as React from 'react';
@@ -50,9 +50,11 @@ export default App;
 
 Your App need to expose a `meta.json` file (customisable) containing the current production version.
 
+You can find a working example in this repo for more details.
+
 ### Full API
 
-````typescript
+```typescript
 export type EasyCacheHookType = {
   loading: boolean;
   isUpToDate: boolean;
@@ -66,4 +68,5 @@ export function useEasyCache(
   metaPath: string = '/meta.json',
   resolver?: ReleaseResolverType
 ): EasyCacheHookType;
-````
+```
+
