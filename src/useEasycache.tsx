@@ -50,7 +50,7 @@ export function useEasyCache(
       }
 
       try {
-        const response = await fetch(metaPath);
+        const response = await fetch(metaPath, { cache: 'no-cache' });
         if (!response.ok) {
           throw new Error('Error fetching meta file on server data.');
         }

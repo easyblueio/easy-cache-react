@@ -70,3 +70,7 @@ export function useEasyCache(
 ): EasyCacheHookType;
 ```
 
+
+## Credit
+
+https://github.com/flexdinesh/cache-busting-example/tree/master
