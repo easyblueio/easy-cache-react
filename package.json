@@ -1,5 +1,5 @@
 {
-    "version": "1.1.0",
+    "version": "1.2.0",
     "license": "MIT",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -58,14 +58,14 @@
         "url": "https://github.com/easyblueio/easy-cache-react/issues"
     },
     "homepage": "https://github.com/easyblueio/easy-cache-react#readme",
-    "module": "dist/easycache.esm.js",
+    "module": "dist/easy-cache-react.esm.js",
     "size-limit": [
         {
-            "path": "dist/easycache.cjs.production.min.js",
+            "path": "dist/easy-cache-react.cjs.production.min.js",
             "limit": "10 KB"
         },
         {
-            "path": "dist/easycache.esm.js",
+            "path": "dist/easy-cache-react.esm.js",
             "limit": "10 KB"
         }
     ],
